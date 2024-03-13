@@ -13,7 +13,7 @@ public class Villager : MonoBehaviour
     bool isSelected;
     public GameObject highlight;
 
-    Vector2 destination;
+    protected Vector2 destination;
     Vector2 movement;
     float speed = 3;
 
@@ -81,7 +81,8 @@ public class Villager : MonoBehaviour
         }
     }
 
-    void Attack()
+    //override in archer to use attack function
+    protected virtual void Attack()
     {
         animator.SetTrigger("Attack");
     }
