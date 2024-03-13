@@ -8,6 +8,7 @@ public class Villager : MonoBehaviour
     Rigidbody2D rb;
     Animator animator;
 
+    //protected allows to access 
     bool clickingOnSelf;
     bool isSelected;
     public GameObject highlight;
