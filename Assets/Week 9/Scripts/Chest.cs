@@ -4,7 +4,7 @@ using UnityEngine;
 
 //enum is a type (string, int, float)
 //ChestType is not a variable name 
-public enum ChestType { Villager, Merchant, Archer }
+public enum ChestType { Villager, Merchant, Archer, Thief }
 
 public class Chest : MonoBehaviour
 {
