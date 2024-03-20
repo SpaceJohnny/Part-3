@@ -8,14 +8,13 @@ public class Villager : MonoBehaviour
     Rigidbody2D rb;
     Animator animator;
 
-    //protected allows to access 
     bool clickingOnSelf;
     bool isSelected;
     public GameObject highlight;
 
     protected Vector2 destination;
     Vector2 movement;
-    float speed = 3;
+    public float speed = 3;
 
     void Start()
     {
@@ -59,12 +58,13 @@ public class Villager : MonoBehaviour
         if (movement.magnitude < 0.1)
         {
             movement = Vector2.zero;
+           speed = 3;
         }
 
         rb.MovePosition(rb.position + movement.normalized * speed * Time.deltaTime);
     }
 
-    void Update()
+    protected virtual void Update()
     {
         //left click: move to the click location
         if (Input.GetMouseButtonDown(0) && isSelected && !clickingOnSelf)
@@ -81,7 +81,6 @@ public class Villager : MonoBehaviour
         }
     }
 
-    //override in archer to use attack function
     protected virtual void Attack()
     {
         animator.SetTrigger("Attack");
