@@ -5,53 +5,34 @@ using UnityEngine;
 
 public class SpaceSquad : MonoBehaviour
 {
-    //SpriteRenderer sr;
-    Rigidbody2D rb;
+    public float Speed = 20f;
+    public SpriteRenderer sr;
+    public Rigidbody2D rb;
 
-    bool clickingOnSelf;
-    bool isSelected;
+    public Color selectedColour;
+    public Color unselectedColour;
 
-    protected Vector2 destination;
-    Vector2 movement;
-
-    // Start is called before the first frame update
     void Start()
     {
+        sr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
-
-        destination = transform.position;
-
         Selected(false);
-    }
-
-    public void Selected(bool value)
-    {
-        isSelected = value;
     }
 
     private void OnMouseDown()
     {
-        clickingOnSelf = true;
+        Controls.SetSelectedPlayer(this, transform);
     }
 
-    private void OnMouseUp()
+    public void Selected(bool isSelected)
     {
-        clickingOnSelf = false;
-    }
-
-    protected virtual void Update()
-    {
-        //left click: move to the click location
-        if (Input.GetMouseButtonDown(0) && isSelected && !clickingOnSelf)
+        if (isSelected)
         {
-            destination = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            sr.color = selectedColour;
         }
-
-        //change code for effect after gaining orb 
-        //right click to attack
-        //if (Input.GetMouseButtonDown(1) && isSelected)
-        //{
-            //Attack();
-        //}
+        else
+        {
+            sr.color = unselectedColour;
+        }
     }
 }

@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class CircleSpawn : MonoBehaviour
 {
-    public GameObject circleBluePrefab;
-    public GameObject circlePinkPrefab;
-    public GameObject circleYellowPrefab;
-    public GameObject circleWhitePrefab;
+    public GameObject[] circlePrefab;
+    //public GameObject circlePinkPrefab;
+    //public GameObject circleYellowPrefab;
+    //public GameObject circleWhitePrefab;
 
     //to use space key to spawn prefabs 
     public KeyCode spawnKey = KeyCode.Space; 
@@ -48,7 +48,7 @@ public class CircleSpawn : MonoBehaviour
             Vector2 randomSpawnPosition = new Vector2(Random.Range(-15f, 15f), Random.Range(-15f, 15f));
 
             //instantiates only the white circle prefab 
-            Instantiate(circleWhitePrefab, randomSpawnPosition, Quaternion.identity);
+            Instantiate(circlePrefab[Random.Range (0,4)], randomSpawnPosition, Quaternion.identity);
 
             prefabsSpawned++;
         }
