@@ -19,6 +19,7 @@ public class SpaceSquad : MonoBehaviour
         Selected(false);
     }
 
+    //referenced from week 7
     private void OnMouseDown()
     {
         Controls.SetSelectedPlayer(this, transform);

@@ -47,7 +47,7 @@ public class CircleSpawn : MonoBehaviour
             //the range of where the prefabs spawn
             Vector2 randomSpawnPosition = new Vector2(Random.Range(-15f, 15f), Random.Range(-15f, 15f));
 
-            //instantiates only the white circle prefab 
+            //instantiates all the prefabs in an array
             Instantiate(circlePrefab[Random.Range (0,4)], randomSpawnPosition, Quaternion.identity);
 
             prefabsSpawned++;

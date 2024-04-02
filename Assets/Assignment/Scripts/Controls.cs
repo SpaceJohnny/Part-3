@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Controls : MonoBehaviour
 {
+    //referenced from week 7 
+    //the player can choose between the SpaceSquad consiting of four different prefabs
     public static SpaceSquad SelectedPlayer { get; private set; }
 
     public static void SetSelectedPlayer(SpaceSquad player, Transform playerTransform)
@@ -21,6 +23,8 @@ public class Controls : MonoBehaviour
         player.rb.velocity = direction * player.Speed;
     }
 
+    //player can control where the character moves by clicking
+    //its better to click and hold where the characters will go when playing 
     private void Update()
     {
         if (SelectedPlayer == null) return;
