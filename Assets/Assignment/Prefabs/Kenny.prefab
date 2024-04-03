@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7975826594072447590}
-  - component: {fileID: 8918381446171722092}
+  - component: {fileID: 3501614124467665810}
   - component: {fileID: 2877005207554846033}
   - component: {fileID: -5953315084882609871}
   - component: {fileID: 7065763737016108271}
@@ -35,7 +35,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8918381446171722092
+--- !u!114 &3501614124467665810
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,14 +44,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1244394566502597593}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50da7eb66caa325438cecb6ade25512f, type: 3}
+  m_Script: {fileID: 11500000, guid: eb570ef3ca398c44b9184379b0a508ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 20
   sr: {fileID: 0}
-  rb: {fileID: 0}
-  selectedColour: {r: 1, g: 0.725698, b: 0, a: 0.78431374}
-  unselectedColour: {r: 0.9811321, g: 0.9235239, b: 0.68956923, a: 0.39215687}
+  rb: {fileID: -5953315084882609871}
+  selectedColour: {r: 1, g: 0.7254902, b: 0, a: 0.78431374}
+  unselectedColour: {r: 0.98039216, g: 0.92156863, b: 0.6901961, a: 0.39215687}
 --- !u!212 &2877005207554846033
 SpriteRenderer:
   m_ObjectHideFlags: 0

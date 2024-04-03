@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -11,6 +12,10 @@ public class SpaceSquad : MonoBehaviour
 
     public Color selectedColour;
     public Color unselectedColour;
+
+    //references to the "Food" script for "FoodType" 
+    //the FoodType.Benny stuff didn't end up being used but i kept the reference
+    public virtual FoodType MatchingFood { get; } = FoodType.Benny;
 
     void Start()
     {
@@ -35,5 +40,10 @@ public class SpaceSquad : MonoBehaviour
         {
             sr.color = unselectedColour;
         }
+    }
+
+    public virtual void Eat()
+    {
+        //Debug.Log("Yummy in my tummy!");
     }
 }

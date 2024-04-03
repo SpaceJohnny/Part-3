@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Controls : MonoBehaviour
 {
-    //referenced from week 7 
+    //code based off of week 7 
     //the player can choose between the SpaceSquad consiting of four different prefabs
     public static SpaceSquad SelectedPlayer { get; private set; }
 
